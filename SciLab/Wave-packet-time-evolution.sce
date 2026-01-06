@@ -27,7 +27,7 @@ function rho = probability_density(x, t)
     rho = prefactor * exp(exponent);
 endfunction
 
-// ---- Plot probability densities ----
+// Plot probability densities
 scf(0);
 for i = 1:length(t_values)
     t = t_values(i);
@@ -38,7 +38,7 @@ ylabel("|Psi(x,t)|^2");
 title("Gaussian Wave Packet Spreading (Free Particle)");
 legend("t=0","t=1","t=3","t=6");
 
-// ---- Expectation values ----
+// Expectation values
 disp("Expectation value <x> = x0 + k0 t");
 for i = 1:length(t_values)
     t = t_values(i);
