@@ -20,7 +20,7 @@ endfunction
 
 T_vals = transmission(E, V0, a);
 
-// ---- Plot ----
+// Plot
 scf(0);
 plot(E, T_vals);
 xlabel("Energy E");
