@@ -4,7 +4,7 @@
 clear;
 clc;
 
-// Physical constants (natural units)
+// Physical constants
 L = 1.0;
 hbar = 1.0;
 m = 1.0;
@@ -22,7 +22,7 @@ function E = energy_n(n, L)
     E = (n^2 * %pi^2 * hbar^2) / (2 * m * L^2);
 endfunction
 
-// ---- Plot eigenfunctions ----
+// Plot eigenfunctions
 scf(0);
 for n = 1:4
     plot(x, psi_n(n, x, L));
@@ -32,7 +32,7 @@ ylabel("Psi(x)");
 title("Particle in a 1D Infinite Potential Well");
 legend("n=1","n=2","n=3","n=4");
 
-// ---- Plot probability densities ----
+// Plot probability densities
 scf(1);
 for n = 1:4
     psi = psi_n(n, x, L);
@@ -43,7 +43,7 @@ ylabel("|Psi(x)|^2");
 title("Probability Densities");
 legend("n=1","n=2","n=3","n=4");
 
-// ---- Energy spectrum ----
+// Energy spectrum
 disp("Energy Eigenvalues:");
 for n = 1:5
     E = energy_n(n, L);
