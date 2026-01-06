@@ -21,7 +21,7 @@ def probability_density(x, t):
     exponent = -(x - x0 - k0 * t)**2 / (2 * st**2)
     return prefactor * np.exp(exponent)
 
-# ---- Plot probability density at different times ----
+# Plot probability density at different times
 plt.figure()
 for t in t_values:
     plt.plot(x, probability_density(x, t), label=f"t = {t}")
@@ -33,7 +33,7 @@ plt.legend()
 plt.grid(True)
 plt.show()
 
-# ---- Expectation value <x> ----
+# Expectation value
 print("Expectation value <x> = x0 + k0 t")
 for t in t_values:
     print(f"t = {t}, <x> ≈ {x0 + k0 * t:.2f}")
