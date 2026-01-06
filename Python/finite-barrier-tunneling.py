@@ -16,7 +16,7 @@ def transmission(E, V0, a):
 
 T_values = transmission(E_values, V0, a)
 
-# ---- Plot transmission vs energy ----
+# Plot transmission vs energy
 plt.figure()
 plt.plot(E_values, T_values)
 plt.xlabel("Energy E")
