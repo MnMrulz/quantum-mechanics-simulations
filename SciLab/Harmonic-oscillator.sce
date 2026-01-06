@@ -7,7 +7,7 @@ clc;
 // Spatial grid
 x = linspace(-5, 5, 1000);
 
-// Hermite polynomials (recursive)
+// Hermite polynomials
 function H = hermite_poly(n, x)
     if n == 0 then
         H = ones(x);
@@ -35,7 +35,7 @@ function E = energy_n(n)
     E = n + 0.5;
 endfunction
 
-// ---- Plot eigenfunctions ----
+// Plot eigenfunctions
 scf(0);
 for n = 0:3
     plot(x, psi_n(n, x));
@@ -45,7 +45,7 @@ ylabel("Psi(x)");
 title("Quantum Harmonic Oscillator Eigenfunctions");
 legend("n=0","n=1","n=2","n=3");
 
-// ---- Plot probability densities ----
+// Plot probability densities
 scf(1);
 for n = 0:3
     psi = psi_n(n, x);
