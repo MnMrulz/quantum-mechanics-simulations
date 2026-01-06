@@ -15,7 +15,7 @@ def psi_n(n, x, L):
 def energy_n(n, L):
     return (n**2 * np.pi**2 * hbar**2) / (2 * m * L**2)
 
-# ---- Plot eigenfunctions ----
+# Plot eigenfunctions
 plt.figure()
 for n in range(1, 5):
     plt.plot(x, psi_n(n, x, L), label=f"n = {n}")
@@ -27,7 +27,7 @@ plt.legend()
 plt.grid(True)
 plt.show()
 
-# ---- Plot probability densities ----
+# Plot probability densities
 plt.figure()
 for n in range(1, 5):
     psi = psi_n(n, x, L)
@@ -40,7 +40,7 @@ plt.legend()
 plt.grid(True)
 plt.show()
 
-# ---- Energy spectrum ----
+# Energy spectrum
 print("Energy Eigenvalues:")
 for n in range(1, 6):
     print(f"n = {n}, E_n = {energy_n(n, L):.4f}")
